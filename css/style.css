@@ -1,0 +1,203 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+*{
+	box-sizing: border-box;
+}
+.loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 15;
+    background-color: gray;
+    color:white;
+    text-align: center;
+}
+
+.main_frame{
+    position: absolute;
+	height: 100%;
+	width:100%;
+	background-image: url("../resource/marble_w.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header_frame {
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    display: none;
+}
+.chat_frame {
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+    padding-bottom: 82px;
+}
+.bottom_frame {
+    position: absolute;
+    width: 100%;
+    padding: 25px;
+    padding-left: 40px;
+    height: 82px;
+    background-color: gray;
+    bottom: 0;
+}
+.chat_box {
+    height: auto;
+    padding: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.message_box {
+    width: 100%;
+    border: none;
+    height: 30px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: auto;
+    resize: none;
+    outline-style:none;
+}
+.from_msg {
+    width: auto;
+    height: auto;
+    padding: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    max-width: 45%;
+    background-color: #4c80d8;
+    color:white;
+}
+.from_msg span {
+    float: right;
+}
+.from_msg b {
+	margin-right: 10px;
+}
+.from_msg div{
+	overflow: hidden;
+	margin-top: 3px;
+    white-space: pre-wrap;
+}
+
+.to_msg{
+	width: auto;
+    height: auto;
+    padding: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    max-width: 45%;
+    background-color: white;
+    border: 2px solid #4c80d8;
+    float: right;
+}
+.to_msg span {
+    float: right;
+}
+.to_msg b {
+	margin-right: 10px;
+}
+.to_msg div{
+	overflow: hidden;
+	margin-top: 3px;
+    white-space: pre-wrap;
+}
+
+.newline{
+    height: auto;
+	width: 100%;
+	padding:2px 0;
+	display: table;
+}
+.send_button {
+    position: absolute;
+    display: none;
+    right: 6px;
+    height: 39px;
+    top: 22px;
+    width: 39px;
+    padding: 5.5px;
+    border-radius: 19px;
+    background-color: #3a3a3a;
+    cursor: pointer;
+}
+.send_button img{
+    width: 27px;
+    height: 24px;
+}
+.option_button {
+    position: absolute;
+    left: 11px;
+    width: 15px;
+    height: 30px;
+    padding: 2px;
+    padding-top: 3.2px;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.option_button img {
+    width: auto;
+    height: 24px;
+}
+.option_slide {
+    position: fixed;
+    height: auto;
+    width: 210px;
+    padding: 5px;
+    z-index: 10;
+    bottom: 70px;
+    left: 11px;
+    border-radius: 3px;
+    background-color: #ffffffc9;
+    display: none;
+}
+.option_slide_button:first-child {
+    height: 35px;
+    background-color: white;
+    width: 100%;
+    margin-top: 0px;
+    cursor: pointer;
+}
+.option_slide_button {
+    height: 35px;
+    background-color: white;
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.1s;
+}
+.option_slide_button:active {
+    background-color: #d6d6d6;
+}
+.dark_mode_button img {
+    height: 29px;
+    width: auto;
+    padding: 0px 4px;
+    padding-top: 7px;
+}
+.dark_mode_button span {
+    position: absolute;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:700px){
+	.to_msg,.from_msg{
+		max-width: 70%;
+	}
+	.send_button{
+		display: block;
+		transition: background-color 0.1s;
+	}
+	.send_button:active{
+		background-color: white;
+	}
+	.bottom_frame {
+	    padding-right: 52px;
+        padding-left: 35px;
+	}
+}

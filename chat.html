@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>live chat</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/running_script.js"></script>
+	<script src="js/option.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="resource/send.png">
+
+</head>
+<body>
+	<div class="loading">loading please wait ...</div>
+
+	<div class="main_frame">
+
+		<div class="option_slide">
+			<div class="dark_mode_button option_slide_button" onclick="darkmode_on_off()">
+				<img src="resource/darkmode_b.png"><span>On Dark Mode</span>
+			</div>
+
+		</div>
+
+		<div class="header_frame"></div>
+		<div class="chat_frame">
+			<div class="chat_box">
+
+			</div>
+		</div>
+		<div class="bottom_frame">
+			<div class="option_button" title="more option">
+				<img src="resource/option.png">
+			</div>
+			<textarea id="message_box" class="message_box" spellcheck="true" placeholder="Type a message"></textarea>
+			<div class="send_button" onclick="save_msg()">
+				<img src="resource/send.png">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
