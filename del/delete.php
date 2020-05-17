@@ -2,7 +2,7 @@
 include("../connect.php");
 
 if(isset($_POST["password"])){
-	if($_POST["password"] == "0178188966"){
+	if($_POST["password"] == "password!!"){
 		if($conn -> query("delete from message")){
 			$result = $conn -> query("select count(from_user) total_val from message");
 			$row = $result->fetch_assoc();
